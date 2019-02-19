@@ -11,10 +11,6 @@ public class sceneManager : MonoBehaviour
 	[SerializeField]
 	private Image fadeImage;
 
-	[SerializeField]
-	private string[] sceneNames;
-
-	private Dictionary<int, string> sceneNamesIdx;
 	private bool fade;
 	private bool fadeIn;
 	private float fadeSpeed;
@@ -24,6 +20,8 @@ public class sceneManager : MonoBehaviour
 	private void Awake()
 	{
 		DontDestroyOnLoad(this.gameObject);
+		fade = true;
+		fadeIn = true;
 	}
 
 	private void Start()
